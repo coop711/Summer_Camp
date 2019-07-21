@@ -1,0 +1,42 @@
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_Camp[?1034hKee-Wonui-iMac-27:Summer_Camp coop2711$ [KKee-Wonui-iMac-27:Summer_Camp coop2711$ find . [K[K[K[K[K[K[Kgit push -u origin mastercommit -m "records modified"add -A .[Kfind . -name "Icon?" -print0 | xargs -0 rm -rf[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pgit commit -m "records modified"find . -name "Icon?" -print0 | xargs -0 rm -rf
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_CampKee-Wonui-iMac-27:Summer_Camp coop2711$ ls -al
+total 24
+drwxr-xr-x@  9 coop2711  staff   306 Jul 22 07:57 .
+drwxr-xr-x@ 31 coop2711  staff  1054 Jul 22 07:44 ..
+-rw-r--r--@  1 coop2711  staff  6148 Jul 22 07:45 .DS_Store
+drwxr-xr-x@  4 coop2711  staff   136 Jul 22 07:57 .Rproj.user
+drwxr-xr-x@ 11 coop2711  staff   374 Jul 22 07:57 R
+-rw-r--r--   1 coop2711  staff   205 Jul 22 07:54 Summer_Camp.Rproj
+drwxr-xr-x   2 coop2711  staff    68 Jul 22 07:44 data
+drwxr-xr-x@  2 coop2711  staff    68 Jul 22 07:57 docs
+drwxr-xr-x@ 20 coop2711  staff   680 Jul 22 07:57 pics
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_CampKee-Wonui-iMac-27:Summer_Camp coop2711$ git init
+Initialized empty Git repository in /Users/coop2711/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_Camp/.git/
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_CampKee-Wonui-iMac-27:Summer_Camp coop2711$ ls -al
+total 24
+drwxr-xr-x@ 10 coop2711  staff   340 Jul 22 07:58 .
+drwxr-xr-x@ 31 coop2711  staff  1054 Jul 22 07:44 ..
+-rw-r--r--@  1 coop2711  staff  6148 Jul 22 07:45 .DS_Store
+drwxr-xr-x@  4 coop2711  staff   136 Jul 22 07:57 .Rproj.user
+drwxr-xr-x@ 11 coop2711  staff   374 Jul 22 07:58 .git
+drwxr-xr-x@ 11 coop2711  staff   374 Jul 22 07:57 R
+-rw-r--r--   1 coop2711  staff   205 Jul 22 07:54 Summer_Camp.Rproj
+drwxr-xr-x   2 coop2711  staff    68 Jul 22 07:44 data
+drwxr-xr-x@  2 coop2711  staff    68 Jul 22 07:57 docs
+drwxr-xr-x@ 20 coop2711  staff   680 Jul 22 07:57 pics
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_CampKee-Wonui-iMac-27:Summer_Camp coop2711$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m.DS_Store[m
+	[31m.Rproj.user/[m
+	[31mR/[m
+	[31mSummer_Camp.Rproj[m
+	[31mpics/[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_CampKee-Wonui-iMac-27:Summer_Camp coop2711$ git add -A .
