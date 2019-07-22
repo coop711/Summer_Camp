@@ -40,3 +40,324 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 ]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_CampKee-Wonui-iMac-27:Summer_Camp coop2711$ git add -A .
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_CampKee-Wonui-iMac-27:Summer_Camp coop2711$ git commi[K[K[K[K[K[K[K[K[Kgit add -A .[2Pstatus[4Pls -algit init[2Pls -alfind . -name "Icon?" -print0 | xargs -0 rm -rf
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_CampKee-Wonui-iMac-27:Summer_Camp coop2711$ find . -name "Icon?" -print0 | xargs -0 rm -rf[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit add -A .[K[2Pstatus
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	[32mnew file:   .DS_Store[m
+	[32mnew file:   .Rproj.user/6DF1EF29/console06/9096BD87[m
+	[32mnew file:   .Rproj.user/6DF1EF29/console06/9096BD87.env[m
+	[32mnew file:   .Rproj.user/6DF1EF29/console06/INDEX001[m
+	[32mnew file:   .Rproj.user/6DF1EF29/sources/prop/71CB592E[m
+	[32mnew file:   .Rproj.user/6DF1EF29/sources/prop/INDEX[m
+	[32mnew file:   .Rproj.user/6DF1EF29/sources/s-7EE64CE/BB391E62[m
+	[32mnew file:   .Rproj.user/6DF1EF29/sources/s-7EE64CE/BB391E62-contents[m
+	[32mnew file:   .Rproj.user/6DF1EF29/sources/s-7EE64CE/lock_file[m
+	[32mnew file:   .Rproj.user/shared/notebooks/patch-chunk-names[m
+	[32mnew file:   .Rproj.user/shared/notebooks/paths[m
+	[32mnew file:   R/JTBC_20150303.Rmd[m
+	[32mnew file:   R/JTBC_20150303_ggplot.Rmd[m
+	[32mnew file:   R/Pandora2019.Rmd[m
+	[32mnew file:   R/Pandora2019.html[m
+	[32mnew file:   R/Pandora2019_ggplot.Rmd[m
+	[32mnew file:   R/poll_JTBC_0216.Rmd[m
+	[32mnew file:   R/poll_JTBC_1702.Rmd[m
+	[32mnew file:   R/poll_JTBC_170314.Rmd[m
+	[32mnew file:   R/poll_SBS_170331.Rmd[m
+	[32mnew file:   Summer_Camp.Rproj[m
+	[32mnew file:   pics/ poll_0314_source.png[m
+	[32mnew file:   pics/ poll_JTBC_YRKim_law.png[m
+	[32mnew file:   pics/JTBC_20150303.png[m
+	[32mnew file:   pics/JTBC_20150303v2.png[m
+	[32mnew file:   pics/SBS_170331.jpg[m
+	[32mnew file:   pics/jtbc150303.png[m
+	[32mnew file:   pics/jtbc1702.png[m
+	[32mnew file:   pics/jtbc170216.png[m
+	[32mnew file:   pics/jtbc170314.png[m
+	[32mnew file:   pics/pandora.png[m
+	[32mnew file:   pics/pandora1903.jpg[m
+	[32mnew file:   pics/poll_201702_JTBC.jpg[m
+	[32mnew file:   pics/poll_201702_YTN.jpg[m
+	[32mnew file:   pics/poll_20170314_JTBC.jpg[m
+	[32mnew file:   pics/poll_20170315_ChannelA.jpg[m
+	[32mnew file:   pics/poll_20170315_real_meter.jpg[m
+	[32mnew file:   pics/poll_20170315_real_meter2.jpg[m
+	[32mnew file:   pics/poll_2017_JTBC.jpg[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/6DF1EF29/console06/9096BD87[m
+
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_CampKee-Wonui-iMac-27:Summer_Camp coop2711$ git statusfind . -name "Icon?" -print0 | xargs -0 rm -rf[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit add -A .[K[2Pstatus[4Pls -algit init[2Pls -alfind . -name "Icon?" -print0 | xargs -0 rm -rf[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[21Pgit push -u origin mastercommit -m "records modified"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"s"t"[1P"[1P"s"u"m"m"e"r" "c"a"m"p" "s"t"a"r"t"e"d"
+[master (root-commit) 426e6ef] summer camp started
+ 39 files changed, 1700 insertions(+)
+ create mode 100644 .DS_Store
+ create mode 100644 .Rproj.user/6DF1EF29/console06/9096BD87
+ create mode 100644 .Rproj.user/6DF1EF29/console06/9096BD87.env
+ create mode 100644 .Rproj.user/6DF1EF29/console06/INDEX001
+ create mode 100644 .Rproj.user/6DF1EF29/sources/prop/71CB592E
+ create mode 100644 .Rproj.user/6DF1EF29/sources/prop/INDEX
+ create mode 100644 .Rproj.user/6DF1EF29/sources/s-7EE64CE/BB391E62
+ create mode 100644 .Rproj.user/6DF1EF29/sources/s-7EE64CE/BB391E62-contents
+ create mode 100644 .Rproj.user/6DF1EF29/sources/s-7EE64CE/lock_file
+ create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names
+ create mode 100644 .Rproj.user/shared/notebooks/paths
+ create mode 100755 R/JTBC_20150303.Rmd
+ create mode 100644 R/JTBC_20150303_ggplot.Rmd
+ create mode 100644 R/Pandora2019.Rmd
+ create mode 100644 R/Pandora2019.html
+ create mode 100644 R/Pandora2019_ggplot.Rmd
+ create mode 100644 R/poll_JTBC_0216.Rmd
+ create mode 100644 R/poll_JTBC_1702.Rmd
+ create mode 100755 R/poll_JTBC_170314.Rmd
+ create mode 100755 R/poll_SBS_170331.Rmd
+ create mode 100644 Summer_Camp.Rproj
+ create mode 100755 pics/ poll_0314_source.png
+ create mode 100755 pics/ poll_JTBC_YRKim_law.png
+ create mode 100755 pics/JTBC_20150303.png
+ create mode 100755 pics/JTBC_20150303v2.png
+ create mode 100755 pics/SBS_170331.jpg
+ create mode 100644 pics/jtbc150303.png
+ create mode 100644 pics/jtbc1702.png
+ create mode 100644 pics/jtbc170216.png
+ create mode 100644 pics/jtbc170314.png
+ create mode 100644 pics/pandora.png
+ create mode 100644 pics/pandora1903.jpg
+ create mode 100755 pics/poll_201702_JTBC.jpg
+ create mode 100755 pics/poll_201702_YTN.jpg
+ create mode 100755 pics/poll_20170314_JTBC.jpg
+ create mode 100755 pics/poll_20170315_ChannelA.jpg
+ create mode 100755 pics/poll_20170315_real_meter.jpg
+ create mode 100755 pics/poll_20170315_real_meter2.jpg
+ create mode 100755 pics/poll_2017_JTBC.jpg
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_CampKee-Wonui-iMac-27:Summer_Camp coop2711$ git commit -m "summer camp started"status[Kcommit -m "summer camp started"[Kgit push -u origin[K[K[K[K[K[K[K[K[K[K[K[K[K[Kremote add origin https://github.com/coop711/Summer_camp .git [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Camp.g[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CCamp.[1@g[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_CampKee-Wonui-iMac-27:Summer_Camp coop2711$ git push -u origin master
+fatal: cannot run rpostback-askpass: No such file or directory
+Username for 'https://github.com': coop711
+fatal: cannot run rpostback-askpass: No such file or directory
+Password for 'https://coop711@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/coop711/Summer_Camp.git/'
+[KKee-Wonui-New-MacBook:Summer_Camp coop2711$ git remote -v
+origin	https://github.com/coop711/Summer_Camp.git (fetch)
+origin	https://github.com/coop711/Summer_Camp.git (push)
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_CampKee-Wonui-New-MacBook:Summer_Camp coop2711$ git push -u origin mast er
+Enumerating objects: 49, done.
+Counting objects:   2% (1/49)   Counting objects:   4% (2/49)   Counting objects:   6% (3/49)   Counting objects:   8% (4/49)   Counting objects:  10% (5/49)   Counting objects:  12% (6/49)   Counting objects:  14% (7/49)   Counting objects:  16% (8/49)   Counting objects:  18% (9/49)   Counting objects:  20% (10/49)   Counting objects:  22% (11/49)   Counting objects:  24% (12/49)   Counting objects:  26% (13/49)   Counting objects:  28% (14/49)   Counting objects:  30% (15/49)   Counting objects:  32% (16/49)   Counting objects:  34% (17/49)   Counting objects:  36% (18/49)   Counting objects:  38% (19/49)   Counting objects:  40% (20/49)   Counting objects:  42% (21/49)   Counting objects:  44% (22/49)   Counting objects:  46% (23/49)   Counting objects:  48% (24/49)   Counting objects:  51% (25/49)   Counting objects:  53% (26/49)   Counting objects:  55% (27/49)   Counting objects:  57% (28/49)   Counting objects:  59% (29/49)   Counting objects:  61% (30/49)   Counting objects:  63% (31/49)   Counting objects:  65% (32/49)   Counting objects:  67% (33/49)   Counting objects:  69% (34/49)   Counting objects:  71% (35/49)   Counting objects:  73% (36/49)   Counting objects:  75% (37/49)   Counting objects:  77% (38/49)   Counting objects:  79% (39/49)   Counting objects:  81% (40/49)   Counting objects:  83% (41/49)   Counting objects:  85% (42/49)   Counting objects:  87% (43/49)   Counting objects:  89% (44/49)   Counting objects:  91% (45/49)   Counting objects:  93% (46/49)   Counting objects:  95% (47/49)   Counting objects:  97% (48/49)   Counting objects: 100% (49/49)   Counting objects: 100% (49/49), done.
+Delta compression using up to 4 threads
+Compressing objects:   2% (1/46)   Compressing objects:   4% (2/46)   Compressing objects:   6% (3/46)   Compressing objects:   8% (4/46)   Compressing objects:  10% (5/46)   Compressing objects:  13% (6/46)   Compressing objects:  15% (7/46)   Compressing objects:  17% (8/46)   Compressing objects:  19% (9/46)   Compressing objects:  21% (10/46)   Compressing objects:  23% (11/46)   Compressing objects:  26% (12/46)   Compressing objects:  28% (13/46)   Compressing objects:  30% (14/46)   Compressing objects:  32% (15/46)   Compressing objects:  34% (16/46)   Compressing objects:  36% (17/46)   Compressing objects:  39% (18/46)   Compressing objects:  41% (19/46)   Compressing objects:  43% (20/46)   Compressing objects:  45% (21/46)   Compressing objects:  47% (22/46)   Compressing objects:  50% (23/46)   Compressing objects:  52% (24/46)   Compressing objects:  54% (25/46)   Compressing objects:  56% (26/46)   Compressing objects:  58% (27/46)   Compressing objects:  60% (28/46)   Compressing objects:  63% (29/46)   Compressing objects:  65% (30/46)   Compressing objects:  67% (31/46)   Compressing objects:  69% (32/46)   Compressing objects:  71% (33/46)   Compressing objects:  73% (34/46)   Compressing objects:  76% (35/46)   Compressing objects:  78% (36/46)   Compressing objects:  80% (37/46)   Compressing objects:  82% (38/46)   Compressing objects:  84% (39/46)   Compressing objects:  86% (40/46)   Compressing objects:  89% (41/46)   Compressing objects:  91% (42/46)   Compressing objects:  93% (43/46)   Compressing objects:  95% (44/46)   Compressing objects:  97% (45/46)   Compressing objects: 100% (46/46)   Compressing objects: 100% (46/46), done.
+Writing objects:   2% (1/49)   Writing objects:   4% (2/49)   Writing objects:   6% (3/49)   Writing objects:   8% (4/49)   Writing objects:  10% (5/49)   Writing objects:  12% (6/49)   Writing objects:  14% (7/49)   Writing objects:  16% (8/49)   Writing objects:  18% (9/49)   Writing objects:  20% (10/49)   Writing objects:  22% (11/49)   Writing objects:  24% (12/49)   Writing objects:  26% (13/49)   Writing objects:  28% (14/49)   Writing objects:  30% (15/49)   Writing objects:  32% (16/49)   Writing objects:  34% (17/49)   Writing objects:  36% (18/49)   Writing objects:  38% (19/49)   Writing objects:  40% (20/49)   Writing objects:  42% (21/49)   Writing objects:  46% (23/49)   Writing objects:  48% (24/49)   Writing objects:  51% (25/49)   Writing objects:  53% (26/49)   Writing objects:  55% (27/49)   Writing objects:  57% (28/49)   Writing objects:  59% (29/49)   Writing objects:  61% (30/49)   Writing objects:  63% (31/49)   Writing objects:  65% (32/49)   Writing objects:  65% (32/49), 1.07 MiB | 665.00 KiB/s   Writing objects:  67% (33/49), 1.07 MiB | 665.00 KiB/s   Writing objects:  69% (34/49), 1.07 MiB | 665.00 KiB/s   Writing objects:  71% (35/49), 1.07 MiB | 665.00 KiB/s   Writing objects:  73% (36/49), 1.07 MiB | 665.00 KiB/s   Writing objects:  75% (37/49), 1.07 MiB | 665.00 KiB/s   Writing objects:  77% (38/49), 1.07 MiB | 665.00 KiB/s   Writing objects:  79% (39/49), 1.07 MiB | 665.00 KiB/s   Writing objects:  81% (40/49), 1.07 MiB | 665.00 KiB/s   Writing objects:  83% (41/49), 1.07 MiB | 665.00 KiB/s   Writing objects:  85% (42/49), 1.07 MiB | 665.00 KiB/s   Writing objects:  87% (43/49), 1.07 MiB | 665.00 KiB/s   Writing objects:  89% (44/49), 1.07 MiB | 665.00 KiB/s   Writing objects:  91% (45/49), 1.07 MiB | 665.00 KiB/s   Writing objects:  93% (46/49), 1.07 MiB | 665.00 KiB/s   Writing objects:  95% (47/49), 1.07 MiB | 665.00 KiB/s   Writing objects:  97% (48/49), 1.07 MiB | 665.00 KiB/s   Writing objects: 100% (49/49), 1.07 MiB | 665.00 KiB/s   Writing objects: 100% (49/49), 2.06 MiB | 1.16 MiB/s, done.
+Total 49 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), done.[K
+To https://github.com/coop711/Summer_Camp.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_CampKee-Wonui-New-MacBook:Summer_Camp coop2711$ ls -al
+total 2064
+drwxr-xr-x@ 11 coop2711  staff     374 Jul 22 07:57 .
+drwxr-xr-x@ 11 coop2711  staff     374 Jul 22 08:04 ..
+-rwxr-xr-x   1 coop2711  staff    3364 May 26 19:18 JTBC_20150303.Rmd
+-rw-------   1 coop2711  staff    4106 May 27 16:04 JTBC_20150303_ggplot.Rmd
+-rw-------   1 coop2711  staff    3369 May 27 16:21 Pandora2019.Rmd
+-rw-r--r--   1 coop2711  staff  993597 Jul 22 07:57 Pandora2019.html
+-rw-------   1 coop2711  staff    4295 May 26 19:09 Pandora2019_ggplot.Rmd
+-rw-r--r--   1 coop2711  staff    4672 May  6 00:15 poll_JTBC_0216.Rmd
+-rw-------   1 coop2711  staff    4307 May 26 22:59 poll_JTBC_1702.Rmd
+-rwxr-xr-x   1 coop2711  staff    5080 May  6 00:15 poll_JTBC_170314.Rmd
+-rwxr-xr-x   1 coop2711  staff    8723 May  6 00:15 poll_SBS_170331.Rmd
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_Camp/RKee-Wonui-iMac-27:R coop2711$ git remote -v
+origin	https://github.com/coop711/Summer_Camp.git (fetch)
+origin	https://github.com/coop711/Summer_Camp.git (push)
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_Camp/RKee-Wonui-iMac-27:R coop2711$ git pull
+From https://github.com/coop711/Summer_Camp
+ * [new branch]      master     -> origin/master
+Already up to date.
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_Camp/RKee-Wonui-iMac-27:R coop2711$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   ../.Rproj.user/6DF1EF29/console06/9096BD87[m
+	[31mmodified:   ../.Rproj.user/6DF1EF29/console06/9096BD87.env[m
+	[31mmodified:   ../.Rproj.user/6DF1EF29/console06/INDEX001[m
+	[31mdeleted:    ../.Rproj.user/6DF1EF29/sources/s-7EE64CE/BB391E62[m
+	[31mdeleted:    ../.Rproj.user/6DF1EF29/sources/s-7EE64CE/BB391E62-contents[m
+	[31mdeleted:    ../.Rproj.user/6DF1EF29/sources/s-7EE64CE/lock_file[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m../.gitignore[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   ../.Rproj.user/6DF1EF29/console06/9096BD87[m
+	[31mmodified:   ../.Rproj.user/6DF1EF29/console06/9096BD87.env[m
+	[31mmodified:   ../.Rproj.user/6DF1EF29/console06/INDEX001[m
+	[31mmodified:   ../.Rproj.user/6DF1EF29/sources/prop/INDEX[m
+	[31mdeleted:    ../.Rproj.user/6DF1EF29/sources/s-7EE64CE/BB391E62[m
+	[31mdeleted:    ../.Rproj.user/6DF1EF29/sources/s-7EE64CE/BB391E62-contents[m
+	[31mdeleted:    ../.Rproj.user/6DF1EF29/sources/s-7EE64CE/lock_file[m
+	[31mmodified:   ../.Rproj.user/shared/notebooks/paths[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m../.gitignore[m
+	[31mGraunt_US_Halley1801.Rmd[m
+	[31mGraunt_US_Halley1801.html[m
+	[31mGraunt_US_Halley1801_en_Summary.Rmd[m
+	[31marea.R[m
+	[31mgraunt_halley_160406.RData[m
+	[31mpoll_JTBC_1702.html[m
+	[31mpoll_JTBC_1702_ggplot.Rmd[m
+	[31mpoll_JTBC_1702_ggplot.html[m
+	[31m../pics/graunt_ggplots.png[m
+	[31m../pics/graunt_table.png[m
+	[31m../pics/poll_JTBC_1702.png[m
+	[31m../pics/poll_JTBC_1702_plots.png[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_Camp/RKee-Wonui-iMac-27:R coop2711$ git add -A .
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_Camp/RKee-Wonui-iMac-27:R coop2711$ git comm[K[K[K[Kstatus
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mnew file:   Graunt_US_Halley1801.Rmd[m
+	[32mnew file:   Graunt_US_Halley1801.html[m
+	[32mnew file:   Graunt_US_Halley1801_en_Summary.Rmd[m
+	[32mnew file:   area.R[m
+	[32mnew file:   graunt_halley_160406.RData[m
+	[32mnew file:   poll_JTBC_1702.html[m
+	[32mnew file:   poll_JTBC_1702_ggplot.Rmd[m
+	[32mnew file:   poll_JTBC_1702_ggplot.html[m
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   ../.Rproj.user/6DF1EF29/console06/9096BD87[m
+	[31mmodified:   ../.Rproj.user/6DF1EF29/console06/9096BD87.env[m
+	[31mmodified:   ../.Rproj.user/6DF1EF29/console06/INDEX001[m
+	[31mmodified:   ../.Rproj.user/6DF1EF29/sources/prop/INDEX[m
+	[31mdeleted:    ../.Rproj.user/6DF1EF29/sources/s-7EE64CE/BB391E62[m
+	[31mdeleted:    ../.Rproj.user/6DF1EF29/sources/s-7EE64CE/BB391E62-contents[m
+	[31mdeleted:    ../.Rproj.user/6DF1EF29/sources/s-7EE64CE/lock_file[m
+	[31mmodified:   ../.Rproj.user/shared/notebooks/paths[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m../.gitignore[m
+	[31m../pics/graunt_ggplots.png[m
+	[31m../pics/graunt_table.png[m
+	[31m../pics/poll_JTBC_1702.png[m
+	[31m../pics/poll_JTBC_1702_plots.png[m
+
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_Camp/RKee-Wonui-iMac-27:R coop2711$ git commit -m "graunt added"
+[master b6f3292] graunt added
+ 8 files changed, 3776 insertions(+)
+ create mode 100644 R/Graunt_US_Halley1801.Rmd
+ create mode 100644 R/Graunt_US_Halley1801.html
+ create mode 100644 R/Graunt_US_Halley1801_en_Summary.Rmd
+ create mode 100644 R/area.R
+ create mode 100644 R/graunt_halley_160406.RData
+ create mode 100644 R/poll_JTBC_1702.html
+ create mode 100644 R/poll_JTBC_1702_ggplot.Rmd
+ create mode 100644 R/poll_JTBC_1702_ggplot.html
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_Camp/RKee-Wonui-iMac-27:R coop2711$ git push -u origin master
+fatal: cannot run rpostback-askpass: No such file or directory
+Username for 'https://github.com': coop711
+fatal: cannot run rpostback-askpass: No such file or directory
+Password for 'https://coop711@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/coop711/Summer_Camp.git/'
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_Camp/RKee-Wonui-iMac-27:R coop2711$ git push -u origin master[1P master[1P master[1P master[1P master[1P master[1P master[1Pmaster[1P master[1P masterh mastert mastert masterp masters master: master/ master/ masterg masteri mastert masterh masteru masterb master. masterc mastero masterm master/ master[1@c[1@o[1@o[1@p[1@7[1@1[1@1[1@@[C[C[C[C[C[C[C[C[C[C[Cc mastero mastero masterp master7 master1 master1 master/ masterC master[1P masterS masteru masterm masterm mastere masterr master_ masterC mastera masterm masterp master. masterg masteri mastert master
+fatal: cannot run rpostback-askpass: No such file or directory
+Password for 'https://coop711@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://coop711@github.com/coop711/Summer_Camp.git/'
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_Camp/RKee-Wonui-iMac-27:R coop2711$ git config -l
+[?1h=credential.helper=osxkeychain[m
+user.name=coop711[m
+user.email=coop711@icloud.com[m
+filter.lfs.required=true[m
+filter.lfs.clean=git-lfs clean -- %f[m
+filter.lfs.smudge=git-lfs smudge -- %f[m
+filter.lfs.process=git-lfs filter-process[m
+core.repositoryformatversion=0[m
+core.filemode=true[m
+core.bare=false[m
+core.logallrefupdates=true[m
+core.ignorecase=true[m
+core.precomposeunicode=true[m
+remote.origin.url=https://github.com/coop711/Summer_Camp.git[m
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*[m
+:[K...skipping...
+credential.helper=osxkeychain[m
+user.name=coop711[m
+user.email=coop711@icloud.com[m
+filter.lfs.required=true[m
+filter.lfs.clean=git-lfs clean -- %f[m
+filter.lfs.smudge=git-lfs smudge -- %f[m
+filter.lfs.process=git-lfs filter-process[m
+core.repositoryformatversion=0[m
+core.filemode=true[m
+core.bare=false[m
+core.logallrefupdates=true[m
+core.ignorecase=true[m
+core.precomposeunicode=true[m
+remote.origin.url=https://github.com/coop711/Summer_Camp.git[m
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*[m
+branch.master.remote=origin[m
+branch.master.merge=refs/heads/master[m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[K[?1l>]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_Camp/RKee-Wonui-iMac-27:R coop2711$ 
