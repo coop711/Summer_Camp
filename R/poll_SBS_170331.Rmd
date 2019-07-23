@@ -18,7 +18,7 @@ SBS 뉴스에서는 다음과 같은 도표의 후보지지도 여론조사 결�
 ## Data Setup
 
 ```{r, data}
-library(extrafont)
+# library(extrafont)
 candidates <- c("문재인", "안철수", "안희정", "이재명", "홍준표", "김진태", "심상정", "유승민") 
 rates <- c(35.2, 17.4, 12.0, 9.5, 7.7, 5.3, 3.4, 2.6)
 party <- c("더불어민주당", "자유한국당", "국민의당", "정의당", "바른정당")
@@ -130,7 +130,7 @@ box(which = "outer", lwd = 3)
 
 ### Data for ggplot
 
-```{r, ggplot, fig.width = 8, fig.height = 4}
+```{r, ggplot, fig.width = 8, fig.height = 4, eval = FALSE}
 library(ggplot2)
 candidates_f <- factor(candidates, levels = candidates)
 rates_df <- data.frame(후보 = candidates_f, 
@@ -141,14 +141,14 @@ rates_df <- data.frame(후보 = candidates_f,
 
 ### data and mapping
 
-```{r, data and mapping, fig.width = 8, fig.height = 4}
+```{r, data and mapping, fig.width = 8, fig.height = 4, eval = FALSE}
 g0 <- ggplot(data = rates_df, 
              mapping = aes(x = 후보, y = 지지도))
 ```
 
 ### `geom_bar()` with single colour for the bars
 
-```{r, single colour for the bars 2, fig.width = 8, fig.height = 4}
+```{r, single colour for the bars 2, fig.width = 8, fig.height = 4, eval = FALSE}
 (g1 <- g0 +
   geom_bar(stat = "identity", 
            fill = "dodgerblue"))
@@ -158,7 +158,7 @@ g0 <- ggplot(data = rates_df,
 
 ### Fill the bars with party colours
 
-```{r, party colours to fill, fig.width = 8, fig.height = 4}
+```{r, party colours to fill, fig.width = 8, fig.height = 4, eval = FALSE}
 (g1.1 <- g0 +
   geom_bar(stat = "identity", 
            fill = candidates_colour))
@@ -166,7 +166,7 @@ g0 <- ggplot(data = rates_df,
 
 ### Font family setting with `g1`
 
-```{r, font family 2, fig.width = 8, fig.height = 4}
+```{r, font family 2, fig.width = 8, fig.height = 4, eval = FALSE}
 (g2 <- g1 +
   theme_void(base_family = "KoPubWorldDotum Medium"))
 ```
@@ -175,7 +175,7 @@ g0 <- ggplot(data = rates_df,
 
 ### Add rates on top of the bars
 
-```{r, rates on top 2, fig.width = 8, fig.height = 4}
+```{r, rates on top 2, fig.width = 8, fig.height = 4, eval = FALSE}
 (g3.0 <- g2 +
   geom_text(mapping = aes(x = 후보, 
                           y = 지지도 + rep(1, 8), 
@@ -187,7 +187,7 @@ g0 <- ggplot(data = rates_df,
 
 ### Different font size for digits
 
-```{r, different font size 2, fig.width = 8, fig.height = 4}
+```{r, different font size 2, fig.width = 8, fig.height = 4, eval = FALSE}
 (g3 <- g2 +
     geom_text(mapping = aes(x = 후보, 
                             y = 지지도 + rep(1, 8), 
@@ -207,14 +207,14 @@ g0 <- ggplot(data = rates_df,
 
 ### Main title (left-justified)
 
-```{r, leftjustified title, fig.width = 8, fig.height = 4}
+```{r, leftjustified title, fig.width = 8, fig.height = 4, eval = FALSE}
 (g4 <- g3 +
   labs(title = main_title))
 ```
 
 ### Main title at the center
 
-```{r, centred title, fig.width = 8, fig.height = 4}
+```{r, centred title, fig.width = 8, fig.height = 4, eval = FALSE}
 (g5 <- g4 +
   theme(plot.title = element_text(hjust = 0.5)))
 ```
@@ -223,7 +223,7 @@ g0 <- ggplot(data = rates_df,
 
 ### Rates at y-axis
 
-```{r, rates at y 2, fig.width = 8, fig.height = 4}
+```{r, rates at y 2, fig.width = 8, fig.height = 4, eval = FALSE}
 (g6 <- g5 +
   scale_y_continuous(breaks = rates, 
                      labels = c_rates))
@@ -233,7 +233,7 @@ g0 <- ggplot(data = rates_df,
 
 ### Clear axes
 
-```{r, clear axes, fig.width = 8, fig.height = 4}
+```{r, clear axes, fig.width = 8, fig.height = 4, eval = FALSE}
 (g7 <- g6 +
   theme(panel.border = element_blank(),
         axis.title.x = element_blank(),
@@ -247,7 +247,7 @@ g0 <- ggplot(data = rates_df,
 
 ### Names closer to the bars
 
-```{r, names closer to bars 2, fig.width = 8, fig.height = 4}
+```{r, names closer to bars 2, fig.width = 8, fig.height = 4, eval = FALSE}
 (g8 <- g7 +
     geom_text(mapping = aes(x = 후보,
                             y = -1,
@@ -260,7 +260,7 @@ g0 <- ggplot(data = rates_df,
 
 ### Main title inside the plot region
 
-```{r, main title inside, fig.width = 8, fig.height = 4}
+```{r, main title inside, fig.width = 8, fig.height = 4, eval = FALSE}
 (g9 <- g8 +
     ggtitle("") +
     annotate("text", 
@@ -276,7 +276,7 @@ g0 <- ggplot(data = rates_df,
 
 ### `geom_label()` to enclose the main title in bounding box
 
-```{r, bounding box main title, fig.width = 8, fig.height = 4}
+```{r, bounding box main title, fig.width = 8, fig.height = 4, eval = FALSE}
 (g9.1 <- g8 +
     ggtitle("") +
     geom_label(mapping = aes(x = mean(b1), 
@@ -293,7 +293,7 @@ g0 <- ggplot(data = rates_df,
 
 ### Notes
 
-```{r, notes 2, fig.width = 8, fig.height = 4}
+```{r, notes 2, fig.width = 8, fig.height = 4, eval = FALSE}
 (g9.2 <- g9.1 + 
     annotate("text", 
              x = mean(b1) - 1, y = max(rates) - 8, 
