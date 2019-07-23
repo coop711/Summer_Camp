@@ -84,7 +84,7 @@ str(rates_df)
 str(rates_df_melt)
 ```
 
-```{r, dplyr}
+```{r, dplyr, eval = FALSE}
 library(tidyverse)
 rates_tbl <- rates_df %>%
   as_tibble %>%
@@ -97,9 +97,9 @@ str(rates_tbl)
 
 ### `geom_bar()`
 
-```{r, fig.width = 8, fig.height = 4}
+```{r, fig.width = 8, fig.height = 4, eval = FALSE}
 # library(ggplot2)
-source("theme_kr.R")
+# source("theme_kr.R")
 g0 <- ggplot(data = rates_tbl, 
              mapping = aes(x = candidates, 
                            y = rates, 
@@ -111,7 +111,7 @@ g0 <- ggplot(data = rates_tbl,
 
 <P style = "page-break-before:always">
 
-```{r, fig.height = 4, fig.width = 8}
+```{r, fig.height = 4, fig.width = 8, eval = FALSE}
 (g2 <- g1 +
   geom_text(mapping = aes(x = candidates, 
                           y = rates + 2, 
@@ -125,7 +125,7 @@ g0 <- ggplot(data = rates_tbl,
 <P style = "page-break-before:always">
 -->
 
-```{r, fig.height = 4, fig.width = 8}
+```{r, fig.height = 4, fig.width = 8, eval = FALSE}
 (g3 <- g2 +
   theme_bw() +
   theme_kr)
@@ -133,7 +133,7 @@ g0 <- ggplot(data = rates_tbl,
 
 <P style = "page-break-before:always">
 
-```{r, fig.height = 4, fig.width = 8}
+```{r, fig.height = 4, fig.width = 8, eval = FALSE}
 (g4 <- g3 + 
     scale_fill_manual(name = "", 
                       values = c("darkgrey", "blue"), 
@@ -147,14 +147,14 @@ g0 <- ggplot(data = rates_tbl,
 <P style = "page-break-before:always">
 -->
 
-```{r, fig.height = 4, fig.width = 8}
+```{r, fig.height = 4, fig.width = 8, eval = FALSE}
 (g5 <- g4 + 
     scale_x_discrete(name = "대선후보"))
 ```
 
 <P style = "page-break-before:always">
 
-```{r, fig.height = 4, fig.width = 8}
+```{r, fig.height = 4, fig.width = 8, eval = FALSE}
 (g6 <- g5 +
     scale_y_continuous(name = "지지도", 
                        breaks = as.vector(as.matrix(rates_df[, 2:3])), 
@@ -165,7 +165,7 @@ g0 <- ggplot(data = rates_tbl,
 <P style = "page-break-before:always">
 -->
 
-```{r, fig.height = 4, fig.width = 8}
+```{r, fig.height = 4, fig.width = 8, eval = FALSE}
 (g7 <- g6 +
     labs(title = main_title, 
          subtitle = sub_title))
@@ -173,7 +173,7 @@ g0 <- ggplot(data = rates_tbl,
 
 <P style = "page-break-before:always">
 
-```{r, fig.height = 4, fig.width = 8}
+```{r, fig.height = 4, fig.width = 8, eval = FALSE}
 (g8 <- g7 +
   theme(plot.title = element_text(hjust = 0.5), 
         plot.subtitle = element_text(family = "KoPubWorldDotum Medium"),
