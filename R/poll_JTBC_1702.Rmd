@@ -7,7 +7,11 @@ output: html_document
 
 JTBC 뉴스룸에서는 다음과 같은 도표의 후보지지도 여론조사 결과를 보도. 
 
-![JTBC 뉴스룸 2017. 2월](../pics/poll_2017_JTBC.jpg)
+```{r, out.width = "50%", fig.align = "center"}
+library(knitr)
+library(extrafont)
+knitr::include_graphics("../pics/poll_2017_JTBC.jpg")
+```
 
 막대의 높이에 의구심을 표한 시청자들의 항의에 직면함. 
 
@@ -19,6 +23,7 @@ JTBC 뉴스룸에서는 다음과 같은 도표의 후보지지도 여론조사 
 ```{r, data}
 candidates <- c("문재인", "안희정", "황교안", "안철수", "이재명", "유승민") 
 rates <- c(33, 22, 9, 9, 5, 2)
+# names(rates) <- c("문재인", "안희정", "황교안", "안철수", "이재명", "유승민")
 party <- c("더불어민주당", "자유한국당", "국민의당", "바른정당")
 colour_party <- c("skyblue", "lightgrey", "darkgreen", "darkblue")
 candidates_party <-  c("더불어민주당", "더불어민주당", "자유한국당", 
@@ -44,16 +49,26 @@ b1 <- barplot(rates,
               col = candidates_colour, 
               names.arg = NULL,
               cex.names = 1.5)
-mtext(side = 1, at = b1, line = 0.5, text = candidates, cex = 1.5)
-text(x = b1, y = rates + c(rep(-3, 4), rep(1.5, 2)), 
+mtext(side = 1, 
+      at = b1, 
+      line = 0.5, 
+      text = candidates,
+#      text = names(rates),
+      cex = 1.5)
+text(x = b1, 
+     y = rates + c(rep(-3, 4), rep(1.5, 2)), 
      labels = rates, 
-     col = c("black", "black", "black", "white", "black", "black"),
+     col = c("black", "white")[c(1, 1, 1, 2, 1, 1)],
+#     c("black", "black", "black", "white", "black", "black"),
      cex = 1.5)
 main_title <- "차기 대선주자 지지율(%)"
 title(main = main_title, 
       cex.main = 2)
-box(which = "figure", lwd = 3)
-dev.copy(png, "../pics/jtbc1702.png", width = 640, height = 320)
+box(which = "figure", 
+    lwd = 3)
+dev.copy(png, "../pics/jtbc1702.png", 
+         width = 640, 
+         height = 320)
 dev.off()
 ```
 
