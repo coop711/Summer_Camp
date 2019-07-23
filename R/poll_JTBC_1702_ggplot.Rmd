@@ -7,7 +7,10 @@ output: html_document
 
 JTBC 뉴스룸에서는 다음과 같은 도표의 후보지지도 여론조사 결과를 보도. 
 
-![JTBC 뉴스룸 2017. 2월](../pics/poll_2017_JTBC.jpg)
+```{r, echo = FALSE, out.width = "67%", fig.align = "center"}
+library(knitr)
+include_graphics("../pics/poll_2017_JTBC.jpg")
+```
 
 막대의 높이에 의구심을 표한 시청자들의 항의에 직면함. 
 
@@ -33,6 +36,7 @@ main_title <- "차기 대선주자 지지율(%)"
 ## Barplot (R Base)
 
 ```{r, fig.width = 8, fig.height = 4, eval = TRUE}
+par(family = "KoPubWorldDotum Medium")
 barplot(rates)
 ```
 
@@ -45,12 +49,16 @@ b1 <- barplot(rates,
               col = candidates_colour, 
               names.arg = NULL,
               cex.names = 1.5)
-mtext(side = 1, at = b1, line = 0.5, text = candidates, cex = 1.5)
-text(x = b1, y = rates + c(rep(-3, 4), rep(1.5, 2)), 
+mtext(side = 1, 
+      at = b1, 
+      line = 0.5, 
+      text = candidates, 
+      cex = 1.5)
+text(x = b1, 
+     y = rates + c(rep(-3, 4), rep(1.5, 2)), 
      labels = rates, 
      col = c("black", "black", "black", "white", "black", "black"),
      cex = 1.5)
-main_title <- "차기 대선주자 지지율(%)"
 title(main = main_title, 
       cex.main = 2)
 box(which = "figure", lwd = 3)

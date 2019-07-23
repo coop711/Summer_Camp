@@ -14,11 +14,17 @@ library(knitr)
 
 JTBC 뉴스룸에서 김영란법 국회 통과에 관련하여 여론조사한 결과라고 보여 준 자료는 더 이상 남아 있지 않으나 트위터에 다음과 같은 내용으로 남아 있다. 
 
-`r include_graphics("../pics/JTBC_20150303.png", dpi = NA)`
+```{r, out.width = "50%", fig.align = "center"}
+library(knitr)
+include_graphics("../pics/JTBC_20150303.png")
+```
 
 이 도표의 문제점을 여러 네티즌들이 지적하였더니 방송본에는 다음과 같은 스크린캡처가 남아 있다.
 
-`r include_graphics("../pics/JTBC_20150303v2.png", dpi = 48)`
+```{r, out.width = "50%", fig.align = "center"}
+library(knitr)
+include_graphics("../pics/JTBC_20150303v2.png")
+```
 
 이 도표를 제대로 그리면 어떻게 나오는지 알아보자. Base R의 `pie()`함수를 활용한다. 
 도표 안의 레이블 좌표는 극좌표 변환식 $x = r \cos(\theta), y = r \sin(\theta)$를 이용한다.
@@ -50,7 +56,7 @@ kable(t(as.matrix(poll)), caption = "김영란법 국회 통과")
 
 ## `pie()`
 
-```{r, fig.width = 6, fig.height = 6}
+```{r, out.width = "68%", out.height = "68%", fig.align = "center"}
 par(family = "KoPubWorldDotum Medium")
 pie(poll, 
     labels = names(poll), 

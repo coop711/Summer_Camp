@@ -7,7 +7,15 @@ output: html_document
 
 # Source of Data
 
+```{r, message = FALSE, out.width = "20%", fig.align = "left"}
+library(knitr)
+library(extrafont)
+include_graphics("../pics/graunt_table.png")
+```
+
+<!--
 <img src = "../pics/graunt_table.png" width = "240"/>
+-->
 
 ## Data Input
       
