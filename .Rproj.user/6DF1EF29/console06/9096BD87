@@ -360,4 +360,50 @@ branch.master.merge=refs/heads/master[m
 [1m~[0m
 [1m~[0m
 [1m~[0m
-[K[?1l>]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_Camp/RKee-Wonui-iMac-27:R coop2711$ 
+[KKee-Wonui-iMac-27:R coop2711$ git pull
+remote: Enumerating objects: 64, done.[K
+remote: Counting objects:   1% (1/64)   [Kremote: Counting objects:   3% (2/64)   [Kremote: Counting objects:   4% (3/64)   [Kremote: Counting objects:   6% (4/64)   [Kremote: Counting objects:   7% (5/64)   [Kremote: Counting objects:   9% (6/64)   [Kremote: Counting objects:  10% (7/64)   [Kremote: Counting objects:  12% (8/64)   [Kremote: Counting objects:  14% (9/64)   [Kremote: Counting objects:  15% (10/64)   [Kremote: Counting objects:  17% (11/64)   [Kremote: Counting objects:  18% (12/64)   [Kremote: Counting objects:  20% (13/64)   [Kremote: Counting objects:  21% (14/64)   [Kremote: Counting objects:  23% (15/64)   [Kremote: Counting objects:  25% (16/64)   [Kremote: Counting objects:  26% (17/64)   [Kremote: Counting objects:  28% (18/64)   [Kremote: Counting objects:  29% (19/64)   [Kremote: Counting objects:  31% (20/64)   [Kremote: Counting objects:  32% (21/64)   [Kremote: Counting objects:  34% (22/64)   [Kremote: Counting objects:  35% (23/64)   [Kremote: Counting objects:  37% (24/64)   [Kremote: Counting objects:  39% (25/64)   [Kremote: Counting objects:  40% (26/64)   [Kremote: Counting objects:  42% (27/64)   [Kremote: Counting objects:  43% (28/64)   [Kremote: Counting objects:  45% (29/64)   [Kremote: Counting objects:  46% (30/64)   [Kremote: Counting objects:  48% (31/64)   [Kremote: Counting objects:  50% (32/64)   [Kremote: Counting objects:  51% (33/64)   [Kremote: Counting objects:  53% (34/64)   [Kremote: Counting objects:  54% (35/64)   [Kremote: Counting objects:  56% (36/64)   [Kremote: Counting objects:  57% (37/64)   [Kremote: Counting objects:  59% (38/64)   [Kremote: Counting objects:  60% (39/64)   [Kremote: Counting objects:  62% (40/64)   [Kremote: Counting objects:  64% (41/64)   [Kremote: Counting objects:  65% (42/64)   [Kremote: Counting objects:  67% (43/64)   [Kremote: Counting objects:  68% (44/64)   [Kremote: Counting objects:  70% (45/64)   [Kremote: Counting objects:  71% (46/64)   [Kremote: Counting objects:  73% (47/64)   [Kremote: Counting objects:  75% (48/64)   [Kremote: Counting objects:  76% (49/64)   [Kremote: Counting objects:  78% (50/64)   [Kremote: Counting objects:  79% (51/64)   [Kremote: Counting objects:  81% (52/64)   [Kremote: Counting objects:  82% (53/64)   [Kremote: Counting objects:  84% (54/64)   [Kremote: Counting objects:  85% (55/64)   [Kremote: Counting objects:  87% (56/64)   [Kremote: Counting objects:  89% (57/64)   [Kremote: Counting objects:  90% (58/64)   [Kremote: Counting objects:  92% (59/64)   [Kremote: Counting objects:  93% (60/64)   [Kremote: Counting objects:  95% (61/64)   [Kremote: Counting objects:  96% (62/64)   [Kremote: Counting objects:  98% (63/64)   [Kremote: Counting objects: 100% (64/64)   [Kremote: Counting objects: 100% (64/64), done.[K
+remote: Compressing objects:   4% (1/22)   [Kremote: Compressing objects:   9% (2/22)   [Kremote: Compressing objects:  13% (3/22)   [Kremote: Compressing objects:  18% (4/22)   [Kremote: Compressing objects:  22% (5/22)   [Kremote: Compressing objects:  27% (6/22)   [Kremote: Compressing objects:  31% (7/22)   [Kremote: Compressing objects:  36% (8/22)   [Kremote: Compressing objects:  40% (9/22)   [Kremote: Compressing objects:  45% (10/22)   [Kremote: Compressing objects:  50% (11/22)   [Kremote: Compressing objects:  54% (12/22)   [Kremote: Compressing objects:  59% (13/22)   [Kremote: Compressing objects:  63% (14/22)   [Kremote: Compressing objects:  68% (15/22)   [Kremote: Compressing objects:  72% (16/22)   [Kremote: Compressing objects:  77% (17/22)   [Kremote: Compressing objects:  81% (18/22)   [Kremote: Compressing objects:  86% (19/22)   [Kremote: Compressing objects:  90% (20/22)   [Kremote: Compressing objects:  95% (21/22)   [Kremote: Compressing objects: 100% (22/22)   [Kremote: Compressing objects: 100% (22/22), done.[K
+Unpacking objects:   2% (1/44)   Unpacking objects:   4% (2/44)   Unpacking objects:   6% (3/44)   Unpacking objects:   9% (4/44)   Unpacking objects:  11% (5/44)   Unpacking objects:  13% (6/44)   Unpacking objects:  15% (7/44)   Unpacking objects:  18% (8/44)   Unpacking objects:  20% (9/44)   Unpacking objects:  22% (10/44)   Unpacking objects:  25% (11/44)   Unpacking objects:  27% (12/44)   Unpacking objects:  29% (13/44)   Unpacking objects:  31% (14/44)   Unpacking objects:  34% (15/44)   Unpacking objects:  36% (16/44)   Unpacking objects:  38% (17/44)   Unpacking objects:  40% (18/44)   Unpacking objects:  43% (19/44)   Unpacking objects:  45% (20/44)   Unpacking objects:  47% (21/44)   Unpacking objects:  50% (22/44)   Unpacking objects:  52% (23/44)   Unpacking objects:  54% (24/44)   Unpacking objects:  56% (25/44)   Unpacking objects:  59% (26/44)   Unpacking objects:  61% (27/44)   Unpacking objects:  63% (28/44)   Unpacking objects:  65% (29/44)   Unpacking objects:  68% (30/44)   Unpacking objects:  70% (31/44)   Unpacking objects:  72% (32/44)   Unpacking objects:  75% (33/44)   Unpacking objects:  77% (34/44)   Unpacking objects:  79% (35/44)   Unpacking objects:  81% (36/44)   Unpacking objects:  84% (37/44)   Unpacking objects:  86% (38/44)   Unpacking objects:  88% (39/44)   Unpacking objects:  90% (40/44)   Unpacking objects:  93% (41/44)   Unpacking objects:  95% (42/44)   Unpacking objects:  97% (43/44)   remote: Total 44 (delta 21), reused 43 (delta 20), pack-reused 0[K
+Unpacking objects: 100% (44/44)   Unpacking objects: 100% (44/44), done.
+From https://github.com/coop711/Summer_Camp
+   426e6ef..cee3693  master     -> origin/master
+Updating 41e9f8a..cee3693
+error: Your local changes to the following files would be overwritten by merge:
+	R/poll_JTBC_1702_ggplot.html
+Please commit your changes or stash them before you merge.
+Aborting
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_Camp/RKee-Wonui-iMac-27:R coop2711$ [KKee-Wonui-iMac-27:R coop2711$ git pull
+Updating 41e9f8a..cee3693
+Fast-forward
+ .Rproj.user/shared/notebooks/paths |    6 [32m+[m[31m-[m
+ R/Graunt_US_Halley1801.Rmd         |   88 [32m++[m[31m--[m
+ R/Graunt_US_Halley1801.html        | 1249 [31m-------------------------------------------------[m
+ R/Pandora2019.Rmd                  |   15 [32m+[m[31m-[m
+ R/Pandora2019.html                 |  310 [31m------------[m
+ R/graunt_halley_1801.RData         |  Bin [31m0[m -> [32m162999[m bytes
+ R/poll_JTBC_0216.Rmd               |   20 [32m+[m[31m-[m
+ R/poll_JTBC_1702.Rmd               |   27 [32m+[m[31m-[m
+ R/poll_JTBC_1702.html              |  352 [31m--------------[m
+ R/poll_JTBC_1702_ggplot.html       |  353 [31m--------------[m
+ R/poll_SBS_170331.Rmd              |   32 [32m+[m[31m-[m
+ pics/graunt_plots.png              |  Bin [31m0[m -> [32m12431[m bytes
+ pics/graunt_surv.png               |  Bin [31m0[m -> [32m7123[m bytes
+ pics/jtbc1702.png                  |  Bin [31m19554[m -> [32m4259[m bytes
+ pics/jtbc170216.png                |  Bin [31m23962[m -> [32m4885[m bytes
+ pics/pandora.png                   |  Bin [31m32151[m -> [32m6002[m bytes
+ pics/poll_2017_JTBC.jpg            |  Bin [31m47235[m -> [32m0[m bytes
+ pics/poll_JTBC_1702.png            |  Bin [31m106123[m -> [32m0[m bytes
+ pics/poll_JTBC_1702_plots.png      |  Bin [31m572153[m -> [32m0[m bytes
+ 19 files changed, 102 insertions(+), 2350 deletions(-)
+ delete mode 100644 R/Graunt_US_Halley1801.html
+ delete mode 100644 R/Pandora2019.html
+ create mode 100644 R/graunt_halley_1801.RData
+ delete mode 100644 R/poll_JTBC_1702.html
+ delete mode 100644 R/poll_JTBC_1702_ggplot.html
+ create mode 100644 pics/graunt_plots.png
+ create mode 100644 pics/graunt_surv.png
+ delete mode 100755 pics/poll_2017_JTBC.jpg
+ delete mode 100644 pics/poll_JTBC_1702.png
+ delete mode 100644 pics/poll_JTBC_1702_plots.png
+]0;~/Google 드라이브/Works/Class/Data_Science/R.WD/Summer_Camp/RKee-Wonui-iMac-27:R coop2711$ 
