@@ -94,11 +94,20 @@ kable(poll_tbl)
 ggplot(data = poll_tbl, 
        mapping = aes(x = 2, y = value, fill = key)) +
   geom_bar(stat = "identity") +
-  geom_text(aes(y = pos, label = paste0(poll, "%")), size = 5, vjust = 1) +
-  geom_text(aes(y = pos, label = key), 
-            size = 5, vjust = -1, colour = "white", family = "KoPubWorldDotum Medium") +
-  xlim(1.2, 2.5) +
-  labs(title = "고위공직자 범죄수사처 설립 찬반", x = NULL, y = NULL) +
+  geom_text(aes(y = pos, 
+                label = paste0(poll, "%")), 
+            size = 5, 
+            vjust = 1) +
+  geom_text(aes(y = pos, 
+                label = key), 
+            size = 5, 
+            vjust = -1, 
+            colour = "white", 
+            family = "KoPubWorldDotum Medium") +
+  xlim(1, 2.5) +
+  labs(title = "고위공직자 범죄수사처 설립 찬반", 
+       x = NULL, 
+       y = NULL) +
   scale_y_continuous(breaks = NULL) +
   scale_fill_manual(values = c("gray", "firebrick", "deepskyblue3")) +
   guides(fill = "none") +

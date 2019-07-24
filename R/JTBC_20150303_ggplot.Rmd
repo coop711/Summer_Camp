@@ -80,7 +80,7 @@ dev.off()
 
 ## `coord_polar()`
 
-```{r}
+```{r, fig.height = 6, fig.width = 6, fig.align = "center"}
 library(ggplot2)
 pos <- cumsum(poll) - poll / 2
 pos2 <- pos
@@ -88,15 +88,28 @@ pos2[1] <- 25
 poll_tbl <- data.frame(key = names(poll), value = poll, row.names = NULL)
 ggplot(data = poll_tbl, mapping = aes(x = 2, y = value, fill = key)) +
   geom_bar(stat = "identity") +
-  geom_text(aes(y = pos2, label = poll), size = 8, colour = "white") +
-  xlim(0.5, 2.5) +
-  labs(x = NULL, y = NULL) +
+  geom_text(aes(y = pos2, label = poll), size = 7, colour = "white") +
+  geom_text(aes(x = 2.8, 
+                 y = pos2, 
+                 label = names(poll)), 
+             colour = "black", 
+             size = 5, 
+             family = "KoPubWorldDotum Medium") +
+  annotate("text", x = 1.0, y = 0, label = "%", size = 8) +
+  xlim(1, 3.0) +
+  labs(title = "김영란법\n국회 통과", 
+       x = NULL, 
+       y = NULL) +
   scale_fill_manual(values = c("gray", "red", "blue")) +
 #  scale_y_continuous(breaks = NULL) +
-  guides(fill = guide_legend(title = "", reverse = TRUE)) +
+  guides(fill = "none") +
   theme_void() +
-  theme(axis.ticks = element_blank(),
+  theme(text = element_text(family = "KoPubWorldDotum Medium"),
+        plot.title = element_text(family = "KoPubWorldDotum Bold",
+                                  size = 20, hjust = 0.5, vjust = -10),
+        panel.background = element_rect(fill = "white", colour = "black"), 
+        axis.ticks = element_blank(),
         axis.text = element_blank(),
-        legend.text = element_text(family = "HCR Dotum LVT")) +
+        legend.text = element_text(family = "KoPubWorldDotum Medium")) +
   coord_polar(theta = "y")
 ```
