@@ -21,13 +21,14 @@ knitr::include_graphics("../pics/poll_2017_JTBC.jpg")
 ## Data Setup
 
 ```{r, data}
-candidates <- c("문재인", "안희정", "황교안", "안철수", "이재명", "유승민") 
 rates <- c(33, 22, 9, 9, 5, 2)
-# names(rates) <- c("문재인", "안희정", "황교안", "안철수", "이재명", "유승민")
+names(rates) <- c("문재인", "안희정", "황교안", "안철수", "이재명", "유승민")
+candidates <- names(rates)
 party <- c("더불어민주당", "자유한국당", "국민의당", "바른정당")
 colour_party <- c("skyblue", "lightgrey", "darkgreen", "darkblue")
-candidates_party <-  c("더불어민주당", "더불어민주당", "자유한국당", 
-                       "국민의당", "더불어민주당", "바른정당")
+candidates_party <- party[c(1, 1, 2, 3, 1, 4)]
+# candidates_party <-  c("더불어민주당", "더불어민주당", "자유한국당", 
+#                       "국민의당", "더불어민주당", "바른정당")
 match(candidates_party, party)
 candidates_colour <- colour_party[match(candidates_party, party)]
 ```
@@ -47,7 +48,7 @@ par(family = "KoPubWorldDotum Medium")
 b1 <- barplot(rates, 
               axes = FALSE, 
               col = candidates_colour, 
-              names.arg = NULL,
+              names.arg = NA,
               cex.names = 1.5)
 mtext(side = 1, 
       at = b1, 
@@ -56,8 +57,10 @@ mtext(side = 1,
 #      text = names(rates),
       cex = 1.5)
 text(x = b1, 
-     y = rates + c(rep(-3, 4), rep(1.5, 2)), 
+     y = rates,
+#      y = rates + c(rep(-3, 4), rep(1.5, 2)), 
      labels = rates, 
+pos = c(rep(1, 4), rep(3, 2)),
      col = c("black", "white")[c(1, 1, 1, 2, 1, 1)],
 #     c("black", "black", "black", "white", "black", "black"),
      cex = 1.5)
