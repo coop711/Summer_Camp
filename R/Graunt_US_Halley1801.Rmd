@@ -586,7 +586,8 @@ text(x = c(16, 36, 70), y = c(25, 50, 90), label = c("Graunt", "Halley", "US93")
 
 ## ggplot 
 
-```{r, library ggplot2, eval = FALSE}
+```{r, library ggplot2, eval = TRUE}
+library(tidyverse)
 library(ggplot2)
 ```
 
@@ -600,19 +601,20 @@ library(reshape2)
 
 How `melt()` works
 
-```{r, format of melt, eval = FALSE}
-graunt_us_melt <- melt(graunt_us, 
-                       id.vars = "x", 
-                       measure.vars = c("xPo_g", "xPo_us"), 
-                       value.name = "xPo", 
-                       variable.name = "times")
+```{r, format of melt, eval = TRUE}
+graunt_us_melt <- gather(data = graunt_us, key = "times", value = "xPo", -x)
+# graunt_us_melt <- melt(graunt_us, 
+#                        id.vars = "x", 
+#                        measure.vars = c("xPo_g", "xPo_us"), 
+#                        value.name = "xPo", 
+#                        variable.name = "times")
 graunt_us_melt
 str(graunt_us_melt)
 ```
 
 * Change factor levels of `times`
 
-```{r, factor level, eval = FALSE}
+```{r, factor level, eval = TRUE}
 levels(graunt_us_melt$times) <- c("Graunt", "US1993")
 graunt_us_melt
 ```
@@ -623,7 +625,7 @@ graunt_us_melt
 
 ## Structure of ggplot
 
-```{r, geom aes, fig.width = 4, fig.height = 4, eval = FALSE}
+```{r, geom aes, fig.width = 4, fig.height = 4, eval = TRUE}
 (g1 <- ggplot(data = graunt,
               mapping = aes(x = x, y = xPo_g)) + 
    geom_line())
@@ -631,21 +633,21 @@ graunt_us_melt
 
 <P style = "page-break-before:always">
 
-```{r, fig.width = 4, fig.height = 4, eval = FALSE}
+```{r, fig.width = 4, fig.height = 4, eval = TRUE}
 (g2 <- g1 +
   geom_point(shape = 21, fill = "white"))
 ```
 
 <P style = "page-break-before:always">
 
-```{r, fig.width = 4, fig.height = 4, eval = FALSE}
+```{r, fig.width = 4, fig.height = 4, eval = TRUE}
 (g3 <- g2 +
   theme_bw())
 ```
 
 <P style = "page-break-before:always">
 
-```{r, fig.width = 4, fig.height = 4, eval = FALSE}
+```{r, fig.width = 4, fig.height = 4, eval = TRUE}
 (g4 <- g3 +
    xlab(x_lab) + 
    ylab(y_lab) + 
@@ -656,7 +658,7 @@ graunt_us_melt
 
 <P style = "page-break-before:always">
 
-```{r, fig.width = 4, fig.height = 4, eval = FALSE}
+```{r, fig.width = 4, fig.height = 4, eval = TRUE}
 (g5 <- g4 +
   geom_vline(xintercept = graunt$x, linetype = "dotted") +
   geom_hline(yintercept = 0, linetype = "dotted"))
@@ -664,7 +666,7 @@ graunt_us_melt
 
 <P style = "page-break-before:always">
 
-```{r, fig.width = 4, fig.height = 4, eval = FALSE}
+```{r, fig.width = 4, fig.height = 4, eval = TRUE}
 (pg5 <- g5 +
   geom_polygon(data = graunt_poly, 
                mapping = aes(x = x, y = y), 
@@ -672,7 +674,7 @@ graunt_us_melt
 # ggsave("../pics/graunt_poly_ggplot.png", pg4)
 ```
 
-```{r, fig.width = 8, fig.height = 12, eval = FALSE}
+```{r, fig.width = 8, fig.height = 12, eval = TRUE}
 library(gridExtra)
 g_graunt <- grid.arrange(g1, g2, g3, g4, g5, pg5, nrow = 3)
 ggsave(g_graunt, file = "../pics/graunt_ggplots.png", width = 8, height = 12)
@@ -688,7 +690,7 @@ Step by step approach to understand the grammar of ggplot
 
 * We set `ggplot()` to accept varying `data.frame()` and `aes()`in `geom_polygon`
 
-```{r, geom_point geom_line, fig.width = 6, fig.height = 6, eval = FALSE}
+```{r, geom_point geom_line, fig.width = 6, fig.height = 6, eval = TRUE}
 (gu1 <- ggplot() + 
   geom_line(data = graunt_us_melt, 
             mapping = aes(x = x, y = xPo, colour = times)))
@@ -696,7 +698,7 @@ Step by step approach to understand the grammar of ggplot
 
 <P style = "page-break-before:always">
 
-```{r, fig.width = 6, fig.height = 6, eval = FALSE}
+```{r, fig.width = 6, fig.height = 6, eval = TRUE}
 (gu2 <- gu1 + 
   geom_point(data = graunt_us_melt, 
              mapping = aes(x = x, y = xPo, colour = times), 
@@ -705,7 +707,7 @@ Step by step approach to understand the grammar of ggplot
 
 <P style = "page-break-before:always">
 
-```{r, fig.width = 6, fig.height = 6, eval = FALSE}
+```{r, fig.width = 6, fig.height = 6, eval = TRUE}
 (gu3 <- gu2 + 
   theme_bw()) 
 ```
@@ -716,7 +718,7 @@ Step by step approach to understand the grammar of ggplot
 
 Reuse `us_graunt` which contains `x = us_graunt_x` and `y = us_graunt_y` for `polygon()`. Note that we start with `gu3`, and also note how to remove default legends.
 
-```{r, polygon, fig.width = 6, fig.height = 6, eval = FALSE}
+```{r, polygon, fig.width = 6, fig.height = 6, eval = TRUE}
 (gup3 <- gu3 + 
   geom_polygon(data = us_graunt, 
                mapping = aes(x = x, y = y), 
@@ -725,7 +727,7 @@ Reuse `us_graunt` which contains `x = us_graunt_x` and `y = us_graunt_y` for `po
 
 <P style = "page-break-before:always">
 
-```{r, fig.width = 6, fig.height = 6, eval = FALSE}
+```{r, fig.width = 6, fig.height = 6, eval = TRUE}
 (gup4 <- gup3 + 
   guides(colour = "none"))
 ```
@@ -738,7 +740,7 @@ Reuse `us_graunt` which contains `x = us_graunt_x` and `y = us_graunt_y` for `po
 
 1. Change the x-axis and y-axis labels
     
-```{r, axis labels, fig.width = 6, fig.height = 6, eval = FALSE}
+```{r, axis labels, fig.width = 6, fig.height = 6, eval = TRUE}
 (gu4 <- gu3 + 
    xlab(x_lab) + 
    ylab(y_lab))
@@ -748,7 +750,7 @@ Reuse `us_graunt` which contains `x = us_graunt_x` and `y = us_graunt_y` for `po
 
 2. Add main title
 
-```{r, ggtitle, fig.width = 6, fig.height = 6, eval = FALSE}
+```{r, ggtitle, fig.width = 6, fig.height = 6, eval = TRUE}
 (gu4 <- gu3 + 
    xlab(x_lab) + 
    ylab(y_lab) + 
@@ -759,7 +761,7 @@ Reuse `us_graunt` which contains `x = us_graunt_x` and `y = us_graunt_y` for `po
 
 3. Change legend title
     
-```{r, legends title, fig.width = 6, fig.height = 6, eval = FALSE}
+```{r, legends title, fig.width = 6, fig.height = 6, eval = TRUE}
 (gu4 <- gu3 + 
    xlab(x_lab) + 
    ylab(y_lab) + 
@@ -771,7 +773,7 @@ Reuse `us_graunt` which contains `x = us_graunt_x` and `y = us_graunt_y` for `po
 
 4. Change legends.
     
-```{r, change legends, fig.width = 6, fig.height = 6, eval = FALSE}
+```{r, change legends, fig.width = 6, fig.height = 6, eval = TRUE}
 (gu4 <- gu3 + 
    xlab(x_lab) + 
    ylab(y_lab) +
@@ -784,7 +786,7 @@ Reuse `us_graunt` which contains `x = us_graunt_x` and `y = us_graunt_y` for `po
 
 5. Place legends inside the plot
 
-```{r, legends inside, fig.width = 6, fig.height = 6, eval = FALSE}
+```{r, legends inside, fig.width = 6, fig.height = 6, eval = TRUE}
 (gu5 <- gu4 + 
    theme(legend.position = c(0.8, 0.5)))
 ```
@@ -793,7 +795,7 @@ Reuse `us_graunt` which contains `x = us_graunt_x` and `y = us_graunt_y` for `po
 
 6. Change x-axis and y-axis tick marks
 
-```{r, axis tick marks, fig.width = 6, fig.height = 6, eval = FALSE}
+```{r, axis tick marks, fig.width = 6, fig.height = 6, eval = TRUE}
 (gu6 <- gu5 + 
    scale_x_continuous(breaks = graunt$x) + 
    scale_y_continuous(breaks = graunt$xPo_g))
@@ -808,7 +810,7 @@ Add information to the plot drawn with `polygon()`
 
 1. Start with `gup4`
 
-```{r, start with p4, fig.width = 6, fig.height = 6, eval = FALSE}
+```{r, start with p4, fig.width = 6, fig.height = 6, eval = TRUE}
 gup4
 ```
 
@@ -816,7 +818,7 @@ gup4
 
 2. Main title, x-axis and y-axis labels
 
-```{r, title and axis labels,  fig.width = 6, fig.height = 6, eval = FALSE}
+```{r, title and axis labels,  fig.width = 6, fig.height = 6, eval = TRUE}
 (gup5 <- gup4 + 
    xlab(x_lab) + 
    ylab(y_lab) +
@@ -827,7 +829,7 @@ gup4
 
 3. `"Graunt Era"`, `"US 1993"`, `"Difference of Life Expectancies"` at proper positions
     
-```{r, text polygon,  fig.width = 6, fig.height = 6, eval = FALSE}
+```{r, text polygon,  fig.width = 6, fig.height = 6, eval = TRUE}
 (gup6 <- gup5 + 
    annotate("text", 
             x = c(20, 40, 70), y = c(20, 60, 90), 
@@ -839,7 +841,7 @@ gup4
 
 4. x-axis and y-axis tick marks
 
-```{r, familiar axis labels, fig.width = 6, fig.height = 6, eval = FALSE}
+```{r, familiar axis labels, fig.width = 6, fig.height = 6, eval = TRUE}
 (gup7 <- gup6 + 
    scale_x_continuous(breaks = graunt$x) + 
    scale_y_continuous(breaks = graunt$xPo_g))
