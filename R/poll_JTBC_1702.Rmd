@@ -60,7 +60,7 @@ text(x = b1,
      y = rates,
 #      y = rates + c(rep(-3, 4), rep(1.5, 2)), 
      labels = rates, 
-pos = c(rep(1, 4), rep(3, 2)),
+     pos = c(rep(1, 4), rep(3, 2)),
      col = c("black", "white")[c(1, 1, 1, 2, 1, 1)],
 #     c("black", "black", "black", "white", "black", "black"),
      cex = 1.5)
@@ -103,9 +103,11 @@ g0 <- ggplot(data = rates_df,
   theme_bw(base_family = "KoPubWorldDotum Medium"))
 (g4 <- g3 +
   geom_text(mapping = aes(x = candidates, 
-                          y = rates + c(rep(-3, 4), rep(2, 2)), 
+#                           y = rates + c(rep(-3, 4), rep(2, 2)),
+                          y = rates,
+                          vjust = c(rep(1.5, 4), rep(-0.5, 2)),
                           label = rates), 
-            colour = c(rep("black", 3), "white", rep("black", 2)),
+            colour = c("black", "white")[c(1, 1, 1, 2, 1, 1)],
             size = 6))
 (g5 <- g4 +
   labs(title = main_title))
