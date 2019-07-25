@@ -602,7 +602,10 @@ library(reshape2)
 How `melt()` works
 
 ```{r, format of melt, eval = TRUE}
-graunt_us_melt <- gather(data = graunt_us, key = "times", value = "xPo", -x)
+graunt_us_melt <- gather(data = graunt_us, 
+                         key = "times", 
+                         value = "xPo", 
+                         -x)
 # graunt_us_melt <- melt(graunt_us, 
 #                        id.vars = "x", 
 #                        measure.vars = c("xPo_g", "xPo_us"), 
@@ -670,7 +673,7 @@ graunt_us_melt
 (pg5 <- g5 +
   geom_polygon(data = graunt_poly, 
                mapping = aes(x = x, y = y), 
-               alpha = 0.3, fill = "grey"))
+               alpha = 0.5, fill = "gray"))
 # ggsave("../pics/graunt_poly_ggplot.png", pg4)
 ```
 

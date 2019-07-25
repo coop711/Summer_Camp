@@ -8,6 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
+library(extrafont)
 ```
 
 ## Problem
@@ -49,7 +50,7 @@ kable(t(as.matrix(poll)), caption = "김영란법 국회 통과")
 ## `pie()`
 
 ```{r, fig.width = 6, fig.height = 6}
-par(family = "KoPubWorldDotum Medium")
+par(family = "NanumGothic")
 pie(poll, 
     labels = "", 
     radius = 1,
@@ -103,7 +104,7 @@ ggplot(data = poll_tbl,
             size = 5, 
             vjust = -1, 
             colour = "white", 
-            family = "KoPubWorldDotum Medium") +
+            family = "NanumGothic") +
   xlim(1, 2.5) +
   labs(title = "고위공직자 범죄수사처 설립 찬반", 
        x = NULL, 
@@ -112,13 +113,13 @@ ggplot(data = poll_tbl,
   scale_fill_manual(values = c("gray", "firebrick", "deepskyblue3")) +
   guides(fill = "none") +
   theme_void() +
-  theme(text = element_text(family = "KoPubWorldDotum Medium"),
-        plot.title = element_text(family = "KoPubWorldDotum Bold", 
+  theme(text = element_text(family = "NanumGothic"),
+        plot.title = element_text(family = "NanumGothic", 
                                   size = 20, 
                                   hjust = 0.5, 
                                   vjust = -5),
         panel.background = element_rect(fill = "white", colour = "black"),
-        legend.text = element_text(family = "KoPubWorldDotum Light")) +
+        legend.text = element_text(family = "NanumGothic")) +
   coord_polar(theta = "y")
 ggsave(file = "../pics/pandora_ggplot.png", width = 5, height = 5)
 ```
