@@ -120,15 +120,15 @@ p2_2
 
 ```{r, message = FALSE, fig.width = 3.2, fig.height = 3.2}
 p3_2 <- p2_2 + 
-  theme_bw(base_family = "KoPubWorldDotum Medium") 
+  theme_bw(base_family = "") 
 #  theme_kr
 p3_2
 p4_2 <- p3_2 + 
   scale_x_discrete(name = "찬반") +
   scale_y_continuous(name = "집계", breaks = vote_df[, 2], 
                      labels = format(vote_df[, 2], big.mark = ",")) +
-  theme(axis.title.x = element_text(family = "KoPubWorldDotum Medium"),
-        axis.title.y = element_text(family = "KoPubWorldDotum Medium"))
+  theme(axis.title.x = element_text(family = ""),
+        axis.title.y = element_text(family = ""))
 p4_2
 ```
 
@@ -139,13 +139,13 @@ p5_2 <- p4_2 +
   scale_fill_manual(name = "찬반", 
                     values = rainbow(n_vote)[n_vote:1], 
                     labels = vote_df$vote) +
-  theme(legend.title = element_text(family = "KoPubWorldDotum Bold"),
-        legend.text = element_text(family = "KoPubWorldDotum Light"))
+  theme(legend.title = element_text(family = ""),
+        legend.text = element_text(family = ""))
 p5_2
 p6_2 <- p5_2 +
   geom_text(aes(y = vote_df[, 2] / 2), 
             label = format(rev(vote_df[, 2]), big.mark = ","), 
-            family = "KoPubWorldDotum Medium", 
+            family = "", 
             position = position_dodge(width = 1))
 p6_2
 ```
@@ -159,7 +159,7 @@ p7_2
 p8_2 <- p5_2 +
   guides(fill = "none") +
   geom_text(aes(y = vote_df[, 2] / 2),
-            family = "KoPubWorldDotum Medium", 
+            family = "", 
             label = rev(pie_label),
             position = position_dodge(width = 1))
 p8_2
@@ -169,7 +169,7 @@ p8_2
 <P style = "page-break-before:always">
 
 ```{r, message = FALSE, fig.width = 3.2, fig.height = 3.2}
-p3 <- p2 + theme_bw(base_family = "KoPubWorldDotum Medium")
+p3 <- p2 + theme_bw(base_family = "")
 # + theme_kr
 p3 
 p4 <- p3 + 
@@ -190,7 +190,7 @@ p5
 p6 <- p5 + 
   geom_text(aes(y = y_coord), 
             label = format(vote_df[, 2], big.mark = ","), 
-#            family = "KoPubWorldDotum Medium", 
+#            family = "", 
             position = position_identity())  
 p6
 # ggsave("../pics/sejong_geom_bar_total_ggplot_stack.png", p6, dpi = 72)
@@ -206,7 +206,7 @@ p8 <- p5 +
   guides(fill = "none") +
   geom_text(aes(y = y_coord),
             label = pie_label,
-#            family = "KoPubWorldDotum Medium", 
+#            family = "", 
             position = position_identity())
 p8
 ```
@@ -234,7 +234,7 @@ pie_total_3 <- pie_total_2 +
                     values = rainbow(n_vote)[n_vote:1])
 pie_total_3
 pie_total_4 <- pie_total_3 +
-  theme_void(base_family = "KoPubWorldDotum Medium")
+  theme_void(base_family = "")
 pie_total_4
 ```
 
@@ -247,7 +247,7 @@ pie_total_5
 pie_total_6 <- pie_total_5 +
   geom_text(aes(y = y_coord), 
             label = pie_label, 
-            family = "KoPubWorldDotum Medium", 
+            family = "", 
             position = position_identity())
 pie_total_6
 ```
@@ -268,7 +268,7 @@ ggsave("../pics/sejong_total_pie_ggplot.png", pie_total_7, dpi = 72)
 #### `pie_gg()`
 
 ```{r, pie_gg}
-pie_gg <- function(df, ggtitle = "", font_family = "KoPubWorldDotum Medium"){
+pie_gg <- function(df, ggtitle = "", font_family = ""){
   n <- length(names(df))
 #   y_coord <- df[, 2] / 2 + c(0, cumsum(head(df[, 2], -1)))
   y_coord <- cumsum(df[, 2]) - df[, 2] / 2
@@ -316,7 +316,7 @@ dump("pie_gg",
 ```{r, message = FALSE, fig.width = 4, fig_height = 4}
 pie_gg(vote_df, 
        ggtitle = "전체 찬반", 
-       font_family = "KoPubWorldDotum Medium")
+       font_family = "")
 ```
 
 <P style = "page-break-before:always">
@@ -437,10 +437,10 @@ vote_commons_df %>%
 ```{r, coord_polar_2, message = FALSE, fig.width = 8, fig_height = 4}
 pie_bureaus <- pie_gg(vote_bureaus_df, 
                       ggtitle = "관료의 찬반", 
-                      font_family = "KoPubWorldDotum Medium")
+                      font_family = "")
 pie_commons <- pie_gg(vote_commons_df, 
                       ggtitle = "품관촌민의 찬반", 
-                      font_family = "KoPubWorldDotum Medium")
+                      font_family = "")
 pies_grid <- grid.arrange(pie_bureaus, 
                           pie_commons, 
                           ncol = 2, 
@@ -521,7 +521,7 @@ b1_seoul <- ggplot(vote_seoul_df,
            position = position_stack(reverse = TRUE))
 b1_seoul
 b2_seoul <- b1_seoul +
-  theme_bw(base_family = "KoPubWorldDotum Medium") +
+  theme_bw(base_family = "") +
 #   theme_kr +
   scale_x_discrete(name = "계급") +
   scale_y_continuous(name = "집계", 
@@ -563,7 +563,7 @@ b1_seoul_dodge
 
 ```{r, fig.width = 6, fig_height = 4.5}
 b2_seoul_dodge <- b1_seoul_dodge +
-  theme_bw(base_family = "KoPubWorldDotum Medium") +
+  theme_bw(base_family = "") +
 # theme_kr +
   scale_x_discrete(name = "계급") +
   scale_y_continuous(name = "집계", 
@@ -619,7 +619,7 @@ b1_seoul_fill
 
 ```{r, fig.width = 6, fig_height = 4.5}
 b2_seoul_fill <- b1_seoul_fill +
-  theme_bw(base_family = "KoPubWorldDotum Medium") +
+  theme_bw(base_family = "") +
 #   theme_kr +
   scale_x_discrete(name = "계급") +
   scale_y_continuous(name = "집계(%)", 
@@ -653,7 +653,7 @@ b3_seoul_fill
 
 ```{r, stack}
 barplot_gg_stack <- function(df, 
-                             base_family = "KoPubWorldDotum Medium", 
+                             base_family = "", 
                              ggtitle = "", 
                              xlab = "", 
                              ylab = "", 
@@ -706,7 +706,7 @@ return(b3)
 
 ```{r, dodge}
 barplot_gg_dodge <- function(df, 
-                             base_family = "KoPubWorldDotum Medium", 
+                             base_family = "", 
                              ggtitle = "", 
                              xlab = "", 
                              ylab = "", 
@@ -751,7 +751,7 @@ return(b3)
 
 ```{r, fill}
 barplot_gg_fill <- function(df, 
-                            base_family = "KoPubWorldDotum Medium", 
+                            base_family = "", 
                             ggtitle = "", 
                             xlab = "", 
                             ylab = "", 
@@ -801,7 +801,7 @@ return(b3)
 ```{r, barplot_gg, message = FALSE}
 barplot_gg <- function(x, 
                        position, 
-                       base_family = "KoPubWorldDotum Medium", 
+                       base_family = "", 
                        ggtitle = "", 
                        xlab = "", 
                        ylab = "", 
@@ -833,7 +833,7 @@ barplot_gg <- function(x,
 ```{r, seoul_stack, fig.width = 6, height = 4.5}
 (bar_seoul_stack <- barplot_gg(vote_seoul_df, 
                                position = "stack", 
-                               base_family = "KoPubWorldDotum Medium", 
+                               base_family = "", 
                                ggtitle = "서울의 찬반", 
                                xlab = "계급", 
                                ylab = "집계", 
@@ -846,7 +846,7 @@ barplot_gg <- function(x,
 ```{r, seoul_dodge, fig.width = 6, height = 4.5}
 (bar_seoul_dodge <- barplot_gg(vote_seoul_df, 
                                position = "dodge", 
-                               base_family = "KoPubWorldDotum Medium", 
+                               base_family = "", 
                                ggtitle = "서울의 찬반", 
                                xlab = "계급", 
                                ylab = "집계", 
@@ -859,7 +859,7 @@ barplot_gg <- function(x,
 ```{r, seoul_fill, fig.width = 6, height = 4.5}
 (bar_seoul_fill <- barplot_gg(vote_seoul_df, 
                               position = "fill", 
-                              base_family = "KoPubWorldDotum Medium", 
+                              base_family = "", 
                               ggtitle = "서울의 찬반", 
                               xlab = "계급", 
                               ylab = "집계(%)", 
@@ -932,7 +932,7 @@ m1
 
 ```{r, fig.width = 6, fig_height = 4.5}
 m2 <- m1 + 
-  theme_bw(base_family = "KoPubWorldDotum Medium")
+  theme_bw(base_family = "")
 m2
 ```
 
@@ -943,7 +943,7 @@ m3 <- m2 +
   geom_text(aes(x = center, 
                 y = 1.05), 
             label = vote_seoul_class_p_df[, 2], 
-            family = "KoPubWorldDotum Medium")
+            family = "")
 m3
 ```
 
@@ -996,7 +996,7 @@ m5
 #### mosaic_gg
 
 ```{r mosaic_gg, fig.width = 6, fig_height = 4.5}
-mosaic_gg <- function(tbl, base_family = "KoPubWorldDotum Medium", 
+mosaic_gg <- function(tbl, base_family = "", 
                       ggtitle = "", 
                       xlab = "", 
                       ylab = "", 
@@ -1036,7 +1036,7 @@ m2 <- m1 +
   theme_bw(base_family = base_family)
 m3 <- m2 + 
   geom_text(aes(x = center, y = 1.05), 
-            label = ifelse(tbl_p_df[, 2] == 0, "", tbl_p_df[, 2]), 
+            label = tbl_p_df[, 2], 
             family = base_family)
 m4 <- m3 + 
   geom_text(aes(x = center, y = label_height), 
@@ -1081,7 +1081,7 @@ dump(list = "mosaic_gg", file = "./mosaic_gg.R")
 ```{r, message = FALSE, fig.width = 6, fig_height = 4.5}
 source("./mosaic_gg.R")
 m5_seoul <- mosaic_gg(vote_seoul_class, 
-                      base_family = "KoPubWorldDotum Medium", 
+                      base_family = "", 
                       ggtitle = "서울의 찬반", 
                       xlab = "계급", 
                       ylab = "찬반", 
@@ -1122,7 +1122,7 @@ vote_region_bureaus %>%
 vote_region_bureaus.df <- as.data.frame(vote_region_bureaus[, -1])
 barplot_gg(vote_region_bureaus.df, 
            position = "stack", 
-           base_family = "KoPubWorldDotum Medium", 
+           base_family = "", 
            ggtitle = "지방 관료들의 찬반", 
            xlab = "지역", 
            ylab = "집계", 
@@ -1136,7 +1136,7 @@ ggsave("../pics/sejong_bureaus_barplot_stack_ggplot.png", width = 9, height = 4.
 
 ```{r, mosaic plot for region ggplot, fig.width = 9, fig_height = 4.5}
 m5_bureaus <- mosaic_gg(vote_region_bureaus[, -1], 
-                        base_family = "KoPubWorldDotum Medium", 
+                        base_family = "", 
                         ggtitle = "지방관료의 찬반", 
                         xlab = "지역별 관료들의 비중(누적 %)", 
                         ylab = "찬반(%)", 
@@ -1155,7 +1155,7 @@ ggsave("../pics/sejong_bureaus_mosaic_ggplot.png", m5_bureaus, width = 9, height
 vote_region_commons_df <- as.data.frame(vote_region_commons)
 barplot_gg(vote_region_commons_df, 
            position = "stack", 
-           base_family = "KoPubWorldDotum Medium", 
+           base_family = "", 
            ggtitle = "품관촌민의 찬반", 
            xlab = "지역", 
            ylab = "집계", 
@@ -1169,7 +1169,7 @@ ggsave("../pics/sejong_commons_barplot_stack_ggplot.png", width = 9, height = 4.
 
 ```{r, mosaic plot for commons ggplot, fig.width = 12, fig_height = 4.5}
 m5_commons <- mosaic_gg(vote_region_commons, 
-                        base_family = "KoPubWorldDotum Medium", 
+                        base_family = "", 
                         ggtitle = "품관촌민의 찬반", 
                         xlab = "지역별 품관촌민의 비중(누적%)", 
                         ylab = "찬반(%)", 
@@ -1210,7 +1210,7 @@ vote_chung_class %>%
 vote_chung_class_df <- as.data.frame(vote_chung_class)
 barplot_gg(vote_chung_class_df, 
            position = "fill", 
-           base_family = "KoPubWorldDotum Medium", 
+           base_family = "", 
            ggtitle = "충청도의 찬반", 
            xlab = "계급", 
            ylab = "집계(%)", 
@@ -1224,7 +1224,7 @@ ggsave("../pics/sejong_chungcheong_barplot_fill_ggplot.png", width = 6, height =
 
 ```{r, mosaic plot for chungcheong ggplot, fig.width = 12, fig_height = 4.5}
 m5_chungcheong <- mosaic_gg(vote_chung_class[, -1], 
-                            base_family = "KoPubWorldDotum Medium", 
+                            base_family = "", 
                             ggtitle = "충청도의 찬반", 
                             xlab = "계급(누적%)", 
                             ylab = "찬반(%)", 

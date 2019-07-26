@@ -26,7 +26,7 @@ str(chosun_df)
 ## Plot (R Base)
 
 ```{r, base plot, fig.width = 9, fig.height = 6.75}
-par(family = "KoPubWorldDotum Medium")
+par(family = "")
 plot(Population / 10000 ~ Years, data = chosun_df, type = "b", 
      pch = 21, col = "red", bg = "white",
      ylim = c(0, 800), xaxt = "n", yaxt = "n", ann = FALSE)
@@ -48,8 +48,8 @@ text(x = 1700, y = c(500, 100), labels = c("인구", "호수"))
 main_title <- "조선시대 호수와 인구수의 변화"
 x_lab <- "연도"
 y_lab <- "호수와 인구수\n(단위 만)"
-title(main = main_title, line = 1, cex.main = 2, family = "KoPubWorldDotum Bold")
-title(xlab = x_lab, ylab = y_lab, line = 2, family = "KoPubWorldDotum Bold")
+title(main = main_title, line = 1, cex.main = 2, family = "")
+title(xlab = x_lab, ylab = y_lab, line = 2, family = "")
 # dev.copy(png, file = "../pics/chosun_demo.png", width = 800, height = 450)
 # dev.off()
 ```
@@ -65,7 +65,6 @@ title(xlab = x_lab, ylab = y_lab, line = 2, family = "KoPubWorldDotum Bold")
 ```{r, reshape}
 library(ggplot2)
 library(reshape2)
-source("theme_kr.R")
 chosun_melt <- melt(chosun_df, 
                     id.vars = "Years", measure.vars = c("Households", "Population"),
                     variable.name = "Variable", value.name = "Counts")
@@ -80,8 +79,7 @@ g1 <- ggplot(data = chosun_melt,
   geom_line() + 
   geom_point(shape = 21, fill = "white", size = 3, show.legend = FALSE) 
 g2 <- g1 + 
-  theme_bw() +  
-  theme_kr
+  theme_bw()
 g3 <- g2 + 
 #  theme(panel.grid.major = element_line(linetype = "dotted", colour = "black")) +
   scale_x_continuous(name = x_lab, breaks = Years_ticks, labels = Years_ticks) +
@@ -99,7 +97,7 @@ g7 <- g6 +
   ggtitle(main_title) + 
   theme(plot.title = element_text(hjust = 0.5, size = 18, margin = margin(b = 12))) +
   annotate("text", x = 1700, y = c(500, 100), label = c("인구", "호수"), 
-           family = "KoPubWorldDotum Medium")
+           family = "")
 g7
 # ggsave("../pics/chosun_demo_ggplot.png", width = 9, height = 81/16, units = "in", dpi = 72)
 ```

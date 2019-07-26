@@ -1,5 +1,5 @@
 pie_gg <-
-function(df, ggtitle = "", font_family = "KoPubWorldDotum Medium"){
+function(df, ggtitle = "", font_family = ""){
   n <- length(names(df))
 #   y_coord <- df[, 2] / 2 + c(0, cumsum(head(df[, 2], -1)))
   y_coord <- cumsum(df[, 2]) - df[, 2] / 2
